@@ -8,7 +8,7 @@ Here is a screenshot of the first frame of a video with the seed 10.
 ![alt text](https://raw.githubusercontent.com/StylexTV/Bubble-Pits/master/image.png)
 
 The algorithm works by applying this formula to each pixel in a frame (each channel has it's own x offset):
-    brightness = abs( simplex(pixelX,pixelY,frameIndex) ) * 255
+    brightness = 1 - abs( simplex(pixelX,pixelY,frameIndex) ) * 255
 
 Then it will apply a "3D-effect" onto the rendered frame by offsetting the r, g and b channel again:
     r(x -25)
